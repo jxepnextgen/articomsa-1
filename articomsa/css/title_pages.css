@@ -1,0 +1,44 @@
+html {
+	font-size: 16px;
+    display: inline-block;
+    margin: 0 0;
+}
+
+body {
+	font-size: 16px;
+    display: initial;
+	width: 100%;
+	
+}
+
+.contenedor-titulo {
+	text-align: center;	
+}
+
+.contenedor-titulo .contenido-titulo {
+	background-color: blue;
+	border-radius: 50%;
+	display: inline-block;
+	padding: 3em 7em;
+	color: white;
+	border: 3px solid black;
+}
+
+.fondo-gris {
+	background: #959595;
+	height: 150px;
+	width: 100%;
+}
+
+.menu {
+margin-top: -2em;
+}
+
+.ovalo-flotante {
+    margin-top: -7%;
+	position: relative;
+}
+
+.titulo {
+
+}

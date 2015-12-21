@@ -1,0 +1,130 @@
+
+
+/*Centrar todo el contenido de la pagina*/
+html, body {
+    height: 100%;
+}
+
+html {
+	font-size: 16px;
+    display: table;
+    margin: auto;	
+}
+
+body {
+	font-size: 16px;
+    display: table-cell;
+	width: 85%;
+	
+}
+
+/*Font para parrafos y H1*/
+p, h1, h2, h3, th{
+	font-family: "Tahoma", Geneva, sans-serif;
+}
+
+h2{
+	position: center;
+	margin-left:12%;	
+}
+
+table, td, th{
+	
+	border: 2px solid black;
+}
+
+a, a:visited, a:hover{
+	text-decoration:none;
+}
+
+/*Centrar Formularios*/
+label{
+	font-family: "Tahoma", Geneva, sans-serif;
+	display: inline-block; 
+	width: 180px; 
+	text-align: left;
+}
+
+/* Objetos para Formularios: 
+fieldset es el cuadro que envuelve al form.
+legend es el titulo en fieldset.
+*/
+
+fieldset{
+	width:90%
+	
+}
+
+legend{
+	font-style:bold;
+	font-size:20px;
+	font-family: "Tahoma", Geneva, sans-serif;
+	
+}
+
+.center-buttons {
+    margin: 0 auto;
+}
+.bottom-margin-title {
+	margin-bottom: 5em;
+}
+.buttons-margin {
+	margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+/*Personalizando boton sumbit de los form.*/
+input[type=submit] {
+	
+	font-size:17px;
+	font-family: "Tahoma", Geneva, sans-serif;
+	display: inline-block; 
+	width: 135px; 
+	text-align: center;
+	
+}
+
+
+/*Clases*/
+/* Estilo para leyenda*/
+.leyenda{
+	border-radius: 10px;
+	background-color: #D8D8D8;
+}
+
+/*Id's*/
+
+/*Div gris que contiene un div mas pequeño con el titulo de la pagina*/
+#contenedor{
+margin-top:15px;
+height: 100px;
+width:90%;
+background-color: #D8D8D8;
+border-radius: 15px;
+padding:10px;
+}
+
+/*Div contenido dentro del div gris. Contiene h1 con el titulo */
+#contenido{
+	background-color: #FFFFFF;
+	height:50px;
+	width:400px;
+	border-radius: 15px;
+	border: solid black;
+	margin: 12px auto;
+	padding-bottom: 20px;
+	text-align:center;
+}
+
+#formulario{
+text-align:center;
+}
+
+#boton{
+    background-color: #D8D8D8;
+	border: 3px solid black;
+	border-radius: 10px;
+	cursor: pointer;
+	text-align:center;
+	width: 200px;
+}
