@@ -73,6 +73,15 @@ mysqli_close($con);
 		<a href="eliminar_cliente.php">
 			<h3>Eliminar Cliente</h3></a>
 	</div>
+	<div id="boton" class="center-buttons buttons-margin">
+		<a href = "../../vistas/menus/menu_cliente.php">
+			<h3>Regresar</h3>	</a>
+	</div>
+<div id="boton" class="center-buttons buttons-margin">
+		<a href = "../../vistas/menus/menu.php">
+			<h3>Menu Principal</h3>
+			</a>
+	</div>
 
 </div>
 
