@@ -10,7 +10,7 @@ $producto = json_decode(stripslashes($_GET['producto'])) .'%';
 			{	
 			#echo "conectado a la abse de datos"; 	
 			} 	
-				$stringBusqueda="SELECT producto.descripcion , marca.descripcion , presentacion.descripcion , presentacion_precio.precio FROM producto join presentacion_precio on producto.id_producto = presentacion_precio.producto_id_producto join presentacion on presentacion.idpresentacion= presentacion_precio.presentacion_idpresentacion join marca on presentacion_precio.marca_id_marca = marca.id_marca where producto.descripcion like '$producto'"; 
+				$stringBusqueda="SELECT producto.id_producto ,producto.descripcion , marca.descripcion , presentacion.descripcion , presentacion_precio.precio FROM producto join presentacion_precio on producto.id_producto = presentacion_precio.producto_id_producto join presentacion on presentacion.idpresentacion= presentacion_precio.presentacion_idpresentacion join marca on presentacion_precio.marca_id_marca = marca.id_marca where producto.descripcion like '$producto' or  producto.id_producto = '$producto' "; 
 					$comandoSql= mysqli_query($conexion,$stringBusqueda);
 						#$resultado=mysqli_fetch_array($comandoSql);   
 						while($resultado = mysqli_fetch_array($comandoSql,MYSQLI_NUM)) {
