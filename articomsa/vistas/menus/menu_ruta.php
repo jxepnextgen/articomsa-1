@@ -25,7 +25,7 @@
 
 <div class="menu">
 	<div id="boton" class="center-buttons buttons-margin">
-	    <a href = "../../../vistas/vistas_1/formularios/registrar_cliente_1.php">
+	    <a href = "../../procesos/busquedas/consultar_ruta.php">
 		<h3>Consultar Ruta</h3></a>
 	</div>
 
@@ -35,12 +35,12 @@
 	</div>
 	
 	<div id="boton" class="center-buttons buttons-margin">
-	    <a href = "../../../vistas/vistas_1/formularios/registrar_cliente_1.php">
+	    <a href = "../../procesos/busquedas/modificar_ruta.php">
 		<h3>Modificar Ruta</h3></a>
 	</div>
 
 	<div id="boton" class="center-buttons buttons-margin">
-	    <a href = "../../../vistas/vistas_1/formularios/registrar_cliente_1.php">
+	    <a href = "../../procesos/busquedas/eliminar_ruta.php">
 		<h3>Eliminar Ruta</h3></a>
 	</div>
 
