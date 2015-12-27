@@ -24,7 +24,8 @@ $(document).ready (function (){
 						$.post("../../procesos/busquedas/BuscarOrdenesFecha.php",/* Este es el target , donde regresaremos el set de datos*/
 							{Fecha1:Fecha1, Fecha2:Fecha2},  /* Estas son las varaibles que vamos a pasar, le asignamos el valor de las variables que asginamos */
 							/*Aca es cuando resivo una respuesta positiva del .php*/ 
-							function(datos){  
+							function(datos){   
+								console.log (datos);
 									//en esta linea solo estamos verificando que nos respondiera positivamente la pagina
 									//alert(datos); 
 									 var DataSetArreglo  = jQuery.parseJSON(datos); 
@@ -34,7 +35,7 @@ $(document).ready (function (){
 													for (i=0; i <DataSetArreglo.length ; i++){  
 								 tabla += "<tr>";  
 								 //aca genero el link para ver a las otras ordenes
-								 tabla += '<td>'+ '<a href="http://127.0.0.1/3/articomsa/vistas/vistas/VistaOrdenFechas.php?NumeroOrden='+DataSetArreglo[i][0] +'">'+DataSetArreglo[i][0]+'</a>' +'</td>' ;
+								 tabla += '<td>'+ '<a href="http://127.0.0.1/ArtiomsaGIT/articomsa/vistas/vistas/VistaOrdenFechas.php?NumeroOrden='+DataSetArreglo[i][0] +'">'+DataSetArreglo[i][0]+'</a>' +'</td>' ;
 								for (j=1; j<DataSetArreglo[i].length; j++){ 
 										tabla += '<td>'+DataSetArreglo[i][j]+ '</td>'  ;
 
