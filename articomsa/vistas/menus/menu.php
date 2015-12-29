@@ -51,7 +51,7 @@
 			</div>
 
 			<div id="boton" class="center-buttons buttons-margin">
-				<a href="menu_ruta_3.php">
+				<a href="menu_usuario.php">
 					<h3>Usuarios</h3>
 				</a>
 			</div>
