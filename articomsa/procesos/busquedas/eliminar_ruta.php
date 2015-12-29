@@ -34,7 +34,7 @@
 
 		
 
-		if(isset($_POST['actualizar'])){
+		if(isset($_POST['eliminar'])){
 			
 		$actualizar = "DELETE FROM ruta WHERE id_ruta='$_POST[id_ruta]'" ;
 			mysqli_query($con, $actualizar); 
