@@ -1,7 +1,7 @@
 <?php
 
 //Incluimos los datos para conexion a base de datos
-include ("../../../procesos/procesos_generales/conector.php");
+include ("../../procesos/conexion/conector.php");
 	
 //Creando conexion	
 	$con=mysqli_connect($host, $usuario, $contrasena)
