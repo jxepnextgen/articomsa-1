@@ -2,7 +2,6 @@
 
 //Incluimos los datos para conexion a base de datos
 include ("../../procesos/conexion/conector.php");
-	
 //Creando conexion	
 	$con=mysqli_connect($host, $usuario, $contrasena)
 		or die ("no se pudo conectar a la base de datos. Error: ".mysqli_error($con));
@@ -10,24 +9,32 @@ include ("../../procesos/conexion/conector.php");
 	//Seleccionando Base de Datos
 		mysqli_select_db($con, $nombre_bd)
 		or die("Error".mysqli_error($con));
-		/*
-orden.fecha, presentacion_precio.idpresentacion_precio, producto.id_producto,producto.descripcion,marca.id_marca,marca.descripcion,
-presentacion.idpresentacion, presentacion.descripcion, presentacion_precio.precio 
-*/
-$sql = mysqli_query($con, "select * from ticket join presentacion_precio on
- ticket.idpresentacion_precio= presentacion_precio.idpresentacion_precio join producto on producto.id_producto= presentacion_precio.producto_id_producto 
- join marca on marca.id_marca= presentacion_precio.marca_id_marca join presentacion on presentacion.idpresentacion = presentacion_precio.presentacion_idpresentacion 
-join orden on orden.id_orden = ticket.orden_id_orden
- where  orden.fecha >= '2015-11-04' and  orden.fecha <='2015-11-12'  order by id_producto ");
-$num_rows = mysqli_num_rows($sql);
+		
 
+
+$sql = mysqli_query($con, "SELECT nombre, direccion, nit, contacto, telefono FROM cliente");
+$num_rows = mysqli_num_rows($sql);
+	
 
 if ($num_rows >= 1){
+	
+	$row = mysqli_fetch_assoc($sql);
+	$archivo = fopen("prueba.csv", "w");
 
-	if($archivo = fopen("prueba.csv", "w")){
+	$separador = "";
+	$coma = "";
 
-		echo "Se ha creado el archivo";
-		echo "<br>";
+	foreach($row as $nombre => $valor){
+
+		$separador .= $coma.''.str_replace('', '""', $nombre);
+		$coma = ",";
+	}
+
+	$separador .= "\n";
+
+    fputs($archivo, $separador);
+
+    mysqli_data_seek($sql, 0);
 
 	while ($row = mysqli_fetch_assoc($sql)){
 	$separador = "";
@@ -45,7 +52,6 @@ if ($num_rows >= 1){
 
 		fclose($archivo);
 
-	} else{ echo"No se ha podido crear/abrir el archivo";}
 
 }else{
 
