@@ -56,7 +56,7 @@ if ($num_rows >= 1){
     fputs($archivo, $separador);
 }
 
-		fclose($archivo);
-} 
+		fclose($archivo); 
+}
 
 ?>
