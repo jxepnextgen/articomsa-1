@@ -23,11 +23,24 @@ $num_rows = mysqli_num_rows($sql);
 
 
 if ($num_rows >= 1){
+	
+	$row = mysqli_fetch_assoc($sql);
+	$archivo = fopen("prueba.csv", "w");
 
-	if($archivo = fopen("prueba.csv", "w")){
+	$separador = "";
+	$coma = "";
 
-		echo "Se ha creado el archivo";
-		echo "<br>";
+	foreach($row as $nombre => $valor){
+
+		$separador .= $coma.''.str_replace('', '""', $nombre);
+		$coma = ",";
+	}
+
+	$separador .= "\n";
+
+    fputs($archivo, $separador);
+
+    mysqli_data_seek($sql, 0);
 
 	while ($row = mysqli_fetch_assoc($sql)){
 	$separador = "";
@@ -44,14 +57,6 @@ if ($num_rows >= 1){
 }
 
 		fclose($archivo);
-
-	} else{ echo"No se ha podido crear/abrir el archivo";}
-
-}else{
-
-	echo "No hay registros";
-}
-	
-mysqli_close($con);
+} 
 
 ?>
