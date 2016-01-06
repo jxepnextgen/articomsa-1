@@ -2,8 +2,10 @@
 <head> 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<link type="text/css" rel="stylesheet" href="css/normalize.css" />
-	<link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+	<link type="text/css" rel="stylesheet" href="../../css/normalize.css" />
+	<link type="text/css" rel="stylesheet" href="../../css/stylesheet.css"/>
+	<link type="text/css" rel="stylesheet" href="../../css/title_pages.css" />
+	
 <title>Registrar Usuario</title>
 </head>
 

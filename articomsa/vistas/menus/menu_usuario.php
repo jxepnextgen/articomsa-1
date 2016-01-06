@@ -25,7 +25,7 @@
 
 <div class="menu">
 	<div id="boton" class="center-buttons buttons-margin">
-	    <a href = "../formularios/registrar_cliente.php">
+	    <a href = "../formularios/registrar_usuario.php">
 		<h3>Crear Usuario<h3></a>
 	</div>
 	
