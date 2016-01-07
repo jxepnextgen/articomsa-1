@@ -1,43 +1,70 @@
 <!DOCTYPE html>
-<head> 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html lang="es">
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<link type="text/css" rel="stylesheet" href="../../css/normalize.css" />
-	<link type="text/css" rel="stylesheet" href="../../css/stylesheet.css"/>
-	<link type="text/css" rel="stylesheet" href="../../css/title_pages.css" />
-	
-<title>Registrar Usuario</title>
-</head>
+		<link type="text/css" rel="stylesheet" href="../../css/normalize.css" />
+		<link type="text/css" rel="stylesheet" href="../../css/stylesheet.css" />
+		<link type="text/css" rel="stylesheet" href="../../css/forms.css" />
+		<link type="text/css" rel="stylesheet" href="../..//css/title_pages.css" />
+		<title>Registrar Usuario</title>
+	</head>
 
-<body>
+	<body>
 
-<div id="contenedor">
-	<div id="contenido">
-	<h1> Registrar Usuario </h1>
-	</div>
-</div>
-<div>
-<br />
-<br />
-<br />
+		<header class="titulo">
+			<div class="fondo-gris"></div>
 
-<form action="registrar_usuario.php" method="post" name="form_registrar_usuario"><br>
-	<fieldset>
-		<legend class="leyenda"> Nuevo Usuario </legend>
-		<div id="formulario">
-		<br><br>
-		<label>Nombres*: </label> <input type="text" name="usuario_nombres"/><br><br>
-		<label>Apellidos*: </label> <input type="text" name="usuario_apellidos"/><br><br>
-		<label>Telefono: </label> <input type="text" name="usuario_telefono"/><br><br>
-		<label>Correo: </label> <input type="text" name="usuario_correo" /><br><br>
-		<label>Contraseña*: </label> <input type="password" name="usuario_contrasena" /><br><br>
-		<label>Confirmar Contraseña*: </label> <input type="password" name="contrasena_confirmar" /><br><br>
-		<input type="submit" value="Crear" /><br><br>
+			<div class="contenedor-titulo bottom-margin-title ovalo-flotante">
+				<div class="contenido-titulo">
+					<h1>Registrar Usuario</h1>
+				</div>
+			</div>
+		</header>
+
+		<div class="form-container">
+			<form action="../../procesos/registros/registrar_usuario.php" method="post" name="form_registrar_usuario"><br>
+				<fieldset>
+					<legend class="leyenda"> Nuevo Usuario </legend>
+					<div id="formulario">
+						<div class="form-containers">
+							<label>Nombres Usuario*: </label>
+							<input class="form-small-fields" type="text" name="nombre" />
+						</div>
+						<div class="form-containers">
+							<label>Telefono: </label> 
+							<input class="form-small-fields" type="text" name="telefono"  />
+						</div>
+						<div class="form-containers">
+							<label>Correo: </label>
+							<input class="form-small-fields" type="text" name="correo"  />
+						</div>
+						<div class="form-containers">
+							<label>Contraseña: </label>
+							<input class="form-small-fields" type="password" name="contra" />
+						</div>
+						<div class="form-containers">
+							<label>Confirmar Contraseña: </label>
+							<input class="form-small-fields" type="password" name="confir_contra" />
+						</div>
+						
+						<br />
+						<input type="submit" value="Crear" />
+					</div>
+				</fieldset>
+				
+				<p> Nota: Los campos que contienen asterisco (*) son obligatorios. </P><br/>
+			</form>
 		</div>
-	</fieldset>
-</form>
-<p> Nota: Los campos que contienen asterisco (*) son obligatorios. </P>
-</div>
-
-</body>
+		<div id="boton" class="center-buttons buttons-margin">
+			<a href = "../menus/menu_usuario.php">
+			<h3>Regresar</h3>
+			</a>
+		</div>
+		<div id="boton" class="center-buttons buttons-margin">
+			<a href = "../menus/menu.php">
+				<h3>Menu Principal</h3>
+			</a>
+		</div>
+	</body>
 </html>
